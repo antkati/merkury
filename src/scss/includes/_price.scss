@@ -1,0 +1,113 @@
+.offer {
+    background: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.offer__box {
+    @extend %grid-elem;
+    text-align: center;
+}
+
+.offer__h2 {
+    @extend %h2;
+    color: map-get($colors, 'dark' );
+    margin-bottom: 80px;
+}
+
+.offer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.offer__item {
+    min-width: 300px;
+    width: 21%;
+    background: #ffffff;
+    box-shadow: 5px 5px 30px rgba(175, 176, 179, 0.3);
+    padding: 50px 30px;
+}
+
+.offer__item:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.offer__item__head {
+    font-size: map-get($size, 'h3');
+    color: map-get($colors, 'dark');
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.offer__item__price-box {
+    color: map-get($colors, 'dark');
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.price-box__usd {
+    font-size: 40px;
+}
+
+.price-box__price {
+    font-size: 72px;    
+}
+
+.price-box__period {
+    font-size: 24px;   
+    font-weight: 400;
+    color: map-get($colors, 'base'); 
+}
+
+.offer__item__features {
+    display: inline-block;
+}
+
+.offer__item__features__row {
+    display: flex;
+    align-items: center;
+}
+
+.offer__item__features__row:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.offer__item__features__i {
+    margin-right: 7px;
+}
+
+.offer__item__features__desc {
+    @extend %p;
+    line-height: 1;
+}
+
+.offer__p {
+    @extend %p;
+    width: 50%;
+    margin: 0 auto 65px auto;    
+}
+
+.offer__btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group__hr {
+    height: 1px;
+    background: #dadee7;
+    width: 12%;
+}
+
+.offer__btn {
+    margin: 0 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .offer__p {
+        width: 100%;   
+    }  
+}

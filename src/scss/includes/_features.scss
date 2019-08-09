@@ -1,0 +1,79 @@
+.features {
+    background: #ffffff;
+    padding-top: 220px;
+    padding-bottom: 50px; 
+}
+
+.features__list {
+    @extend %grid-elem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.features__item {
+    width: 25%;
+    min-width: 300px;
+    padding: 0px 25px;
+    text-align: center;
+}
+
+.features__item:not(:last-child) {
+    margin-bottom: 60px;    
+}
+
+.features__i-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 45px 0px;    
+}
+
+.features__i--1 {
+    width: 80px; 
+    height: 76px;
+    background: url('../images/features-i.png') -10px -118px;
+    background-repeat: no-repeat;
+}
+
+.features__i--2 {
+    width: 92px; 
+    height: 88px;
+    background: url('../images/features-i.png') -10px -10px;
+    background-repeat: no-repeat;
+    background-repeat: center;
+}
+
+.features__i--3 {
+    width: 80px; 
+    height: 80px;
+    background: url('../images/features-i.png') -122px -10px;
+    background-repeat: no-repeat;
+    background-repeat: center;
+}
+
+.features__h3 {
+    margin-bottom: 25px;
+}
+
+.features__desc {
+    @extend %p;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .features {
+        padding-top: 170px;
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        padding-top: 120px;
+    }
+    
+    .features__item:not(:last-child) {
+        margin-bottom: 40px;    
+    }
+}

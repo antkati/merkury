@@ -1,0 +1,56 @@
+- 
+    var OFFERS = [
+        {head: 'BRONZE PLAN', price: '19', features: [
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: false},
+                {name: 'Lorem ipsum dolor sit am', checked: false}
+            ]
+        },
+        {head: 'SILVER PLAN', price: '49', features: [
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: false}
+            ]
+        },
+        {head: 'GOLD PLAN', price: '99', features: [
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true},
+                {name: 'Lorem ipsum dolor sit am', checked: true}
+            ]
+        }                
+    ]
+
+mixin createOfferItems(offers)
+    -for(var i = 0; i < offers.length; i++)
+        - var head = offers[i].head 
+        - var price = offers[i].price 
+        - var features = offers[i].features
+        div(class=['offer__item'])
+            div(class=['offer__item__head'])=head
+            div(class=['offer__item__price-box'])
+                span(class=['price-box__usd']) $
+                span(class=['price-box__price'])=price
+                span(class=['price-box__period']) /mon
+            div(class=['offer__item__features'])
+                -for(var k = 0; k < features.length; k++)
+                    div(class=['offer__item__features__row'])
+                        -var checked = features[k].checked
+                        -var iconPath = checked ? '../images/offer-features-checked.png' : '../images/offer-features-unchecked.png'
+                        img(src=iconPath class=['offer__item__features__i'])
+                        p(class=['offer__item__features__desc'])=features[k].name
+
+
+section(class=['offer'] id='price-section')
+    div(class = ['grid'])
+        div(class = ['offer__box'])
+            h2(class = ['offer__h2']) Check our pricing!
+            div(class = ['offer__list'])
+                +createOfferItems(OFFERS)
+            p(class = ['offer__p']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            div(class = ['offer__btn-group'])
+                div(class = ['btn-group__hr'])
+                button(class = ['btn--blue offer__btn']) Join now!
+                div(class = ['btn-group__hr'])

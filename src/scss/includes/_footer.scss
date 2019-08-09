@@ -1,0 +1,49 @@
+.footer {
+    background: map-get($colors, 'dark');
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer__nav {
+    @extend %grid-elem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    @extend %p;    
+}
+
+.footer__nav__list li {
+    display: inline;
+    margin-right: 60px;
+}
+
+.footer__nav__list a {
+    color: map-get($colors, 'base');    
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer__nav__social__link:not(:last-child) {
+    margin-right: 17px;
+}
+
+@media screen and (max-width: 992px) {
+    .footer__nav__list {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer__nav {
+        justify-content: center;
+    }
+
+    .footer__copyright {
+        display: none;
+    }
+}

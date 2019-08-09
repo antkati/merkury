@@ -1,0 +1,21 @@
+- 
+    var FeaturesItems = [
+        {head: 'Manage Your Workflow', iconClassName: 'features__i--1'},
+        {head: 'Analytics & Insights', iconClassName: 'features__i--2'},
+        {head: 'Organize Your Deadlines', iconClassName: 'features__i--3'}
+    ]
+
+mixin createFeaturesItems(FeaturesItems)
+    - for (var i = 0; i < FeaturesItems.length; i++) 
+        div(class = ['features__item'])
+            div(class = ['features__i-wrap'])
+                div(class=FeaturesItems[i].iconClassName)
+            h3(class = ['features__h3'])=FeaturesItems[i].head
+            p(class = ['features__desc']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            button(class = 'btn--grey') See more	
+	
+
+section(class=['features'] id='features-section')
+    div(class = ['grid'])
+        div(class = ['features__list'])
+            +createFeaturesItems(FeaturesItems)                             

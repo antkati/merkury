@@ -1,0 +1,19 @@
+mixin createInfographicsBox(head, className)
+    div(class = className)
+        h3(class = ['infographics__h3'])=head
+        div(class = ['infographics__pointer'])
+            div(class = ['pointer__line'])
+            div(class = ['pointer__circle-background'])
+                div(class = ['pointer__circle-foreground'])
+        p(class = ['infographics__p']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+
+section(class=['promo-3'])
+    div(class = ['grid'])
+        div(class = ['promo-3__box'])
+            h2(class = ['promo-3__h2']) Powerfull PSD Template
+            p(class = ['promo-3__p']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            div(class = ['promo-3__infographics'])
+                img(class = ['promo-3__img'] src='../images/promo-3-mockup.png')
+                +createInfographicsBox('Clean & modern layout', 'infographics__box--right')
+                +createInfographicsBox('Easy to customize', 'infographics__box--left')
+                

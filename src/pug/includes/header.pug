@@ -1,0 +1,31 @@
+- var lis = ['Features', 'Pricing', 'Blog', 'Contact'];
+
+mixin createNav(links, ...classes)
+    ul(class = classes)
+        - for(var i = 0; i < links.length; i++)
+            li
+                -var linkID = links[i].toLowerCase();
+                a(id=linkID href='#')=links[i]
+
+
+header(class = ['header'])
+    div(class = ['grid'])
+        nav(class = ['header__nav'])
+            a(class=['nav__logo'] href='/')
+                img(class=['logo__img'] src='../images/Logo.png')
+            div(class = ['nav__menu'])
+                +createNav(lis, 'nav__list')
+                button(class=['btn--login']) Log in
+        div(class=['header__musthead'])
+            h2(class=['musthead__h2']) Grow Your business with Merkury
+            p(class=['musthead__subtitle']) Your partner in crime!
+            button(class = ['btn--blue musthead__btn']) Join now!
+            div(class = ['musthead__dashboard-wrap'])
+                img(
+                    class = ['musthead__dashboard-helper']
+                    src = '../images/header-dashboard-helper.png'
+                )
+                img(
+                    class = ['musthead__dashboard-img']
+                    src = '../images/header-dashboard.png'
+                )

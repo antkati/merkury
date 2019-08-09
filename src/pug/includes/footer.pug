@@ -1,0 +1,23 @@
+- var lis = ['Pricing', 'Blog', 'Contact'];
+
+mixin createNav(lis, ...classes)
+    ul(class = classes)
+        - for(var i = 0; i < lis.length; i++)
+            li
+                a(href='#')=lis[i]
+
+mixin createSocialLink(iconPath)  
+    a(href='' class = ['footer__nav__social__link'])
+        img(src = iconPath class = ['footer__nav__social__i'])              
+
+footer(class = ['footer'])
+    div(class = ['grid'])
+        nav(class = ['footer__nav'])  
+            p(class = ['footer__copyright']) © 2016 Merkury All Right Reserved 
+            nav(class = ['footer__nav'])
+                +createNav(lis, 'footer__nav__list')  
+                div(class = ['footer__nav__social'])
+                    +createSocialLink('../images/social-fb.png')
+                    +createSocialLink('../images/social-tw.png')
+                    +createSocialLink('../images/social-gl.png')
+

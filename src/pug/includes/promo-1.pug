@@ -1,0 +1,18 @@
+- var benefits = ['Lorem ipsum dolor sit amet consectetur', 'Lorem ipsum dolor sit amet consectetur']
+
+mixin createBenefits(benefits)
+    - for(var i = 0; i < benefits.length; i++)
+        div(class = ['promo-1__benefits__item'])
+            img(class = ['benefits__img'] src = '../images/promo-1-checked.png')
+            p(class = ['benefits__p'])=benefits[i]
+
+section(class=['promo-1'])
+    div(class = ['grid'])
+        div(class = ['promo-1__content'])
+            h2(class = ['promo-1__h2']) All You need is a browser!
+            div(class = ['promo-1__desc'])            
+                p(class = ['promo-1__desc__p']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p(class = ['promo-1__desc__p']) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            div(class = ['promo-1__benefits'])
+                +createBenefits(benefits)
+

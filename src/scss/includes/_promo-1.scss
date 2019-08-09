@@ -1,0 +1,69 @@
+.promo-1 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background: url(../images/promo-1-background.png) right/50% no-repeat, 
+        linear-gradient(#ffffff 0%, #f6f7fa 20%);
+}
+
+.promo-1__content {
+    @extend %grid-elem;
+}
+
+.promo-1__h2 {
+    @extend %h2;
+    color: map-get($colors, 'dark');
+    margin-bottom: 50px;
+}
+
+.promo-1__desc {
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.promo-1__desc__p {
+    @extend %p;
+}
+
+.promo-1__desc__p:not(:last-child) {
+    margin-bottom: 30px;    
+}
+
+.promo-1__benefits__item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.promo-1__benefits__item:not(:last-child) {
+    margin-bottom: 20px; 
+}
+
+.benefits__img {
+    margin-right: 15px;
+}
+
+.benefits__p {
+    font-size: 22px;
+    color: map-get($colors, 'base')
+}
+
+@media screen and (max-width: 992px) {
+    .promo-1 {
+        padding-top: 100px;
+        padding-bottom: 120px;
+    } 
+    
+    .promo-1__desc {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .promo-1 {
+        background: linear-gradient(#ffffff 0%, #f6f7fa 20%);
+    }
+
+    .promo-1__desc {
+        width: 100%;
+    }
+}
