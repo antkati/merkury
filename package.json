@@ -17,7 +17,7 @@
   "homepage": "https://bitbucket.org/antonovaekaterina/merkury#readme",
   "dependencies": {
     "animated-scroll-to": "^1.2.2",
-    "pug": "^2.0.4",
+    "pug": "^3.0.1",
     "pug-html-loader": "^1.1.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
